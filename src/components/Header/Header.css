@@ -1,41 +1,61 @@
 .header {
-  position: relative;
   display: flex;
   align-items: center;
-  padding: 32px 0px 28px;
-  font-family: "Cabinet Grotesk", sans-serif;
-  font-size: 20px;
+  padding: 32px 0 28px;
+  font-family: "Cabinet-Grotesk", arial, sans-serif;
+  background: rgba(243, 243, 243, 1);
+}
+.header__add-clothes-btn {
+  margin-left: auto;
+  margin: 0 20px 0 20px;
+  color: rgba(0, 0, 0, 1);
+  border: none;
+  font-family: "Cabinet-Grotesk", arial, sans-serif;
   font-weight: 700;
+  font-size: 20px;
   line-height: 24px;
-  text-align: left;
+}
+.header__add-clothes-button:hover {
+  cursor: pointer;
+}
+.header__user-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+.header__actions {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__date-and-location {
+  margin: 0;
+}
+.header__username {
+  margin: 0;
+}
 .header__logo {
   margin-right: 24px;
 }
 
 .header__date-and-location {
-  margin: 0;
-  font-weight: 550;
+  font-family: Cabinet Grotesk;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  margin-top: 11px;
 }
 
-.header__add-clothes-btn {
-  margin: 0px 20px 0px 20px;
-  position: absolute;
-  right: 250px;
-}
 .header__link {
-  text-decoration: none;
-  color: #000;
-}
-
-.header__user-container {
-  position: absolute;
-  right: 0;
   display: flex;
   align-items: center;
-  gap: 12px;
+  text-decoration: none;
+  color: black;
 }
-.header__username {
-  margin: 0;
+.header__avatar {
+  margin-left: 20px;
 }

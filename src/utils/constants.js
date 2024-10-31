@@ -2,92 +2,81 @@ export const weatherOptions = [
   {
     day: true,
     condition: "clear",
-    url: new URL("../assets/day/clear.png", import.meta.url).href,
+    url: new URL("../assets/day/clear.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "cloudy",
-    url: new URL("../assets/day/cloud.png", import.meta.url).href,
+    url: new URL("../assets/day/cloudy.svg", import.meta.url).href,
   },
   {
     day: true,
-    condition: "rain",
-    url: new URL("../assets/day/rain.png", import.meta.url).href,
+    condition: "foggy",
+    url: new URL("../assets/day/fog.svg", import.meta.url).href,
   },
   {
     day: true,
-    condition: "storm",
-    url: new URL("../assets/day/storm.png", import.meta.url).href,
+    condition: "rainy",
+    url: new URL("../assets/day/rainy.svg", import.meta.url).href,
   },
   {
     day: true,
-    condition: "snow",
-    url: new URL("../assets/day/snow.png", import.meta.url).href,
+    condition: "snowy",
+    url: new URL("../assets/day/snow.svg", import.meta.url).href,
   },
   {
     day: true,
-    condition: "fog",
-    url: new URL("../assets/day/fog.png", import.meta.url).href,
+    condition: "stormy",
+    url: new URL("../assets/day/storm.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "clear",
-    url: new URL("../assets/night/clear.png", import.meta.url).href,
+    url: new URL("../assets/night/clear.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "cloudy",
-    url: new URL("../assets/night/cloudy.png", import.meta.url).href,
+    url: new URL("../assets/night/cloudy.svg", import.meta.url).href,
   },
   {
     day: false,
-    condition: "rain",
-    url: new URL("../assets/night/rain.png", import.meta.url).href,
+    condition: "foggy",
+    url: new URL("../assets/night/fog.svg", import.meta.url).href,
   },
   {
     day: false,
-    condition: "storm",
-    url: new URL("../assets/night/storm.png", import.meta.url).href,
+    condition: "rainy",
+    url: new URL("../assets/night/rainy.svg", import.meta.url).href,
   },
   {
     day: false,
-    condition: "snow",
-    url: new URL("../assets/night/snow.png", import.meta.url).href,
+    condition: "snowy",
+    url: new URL("../assets/night/snow.svg", import.meta.url).href,
   },
   {
     day: false,
-    condition: "fog",
-    url: new URL("../assets/night/fog.png", import.meta.url).href,
+    condition: "stormy",
+    url: new URL("../assets/night/storm.svg", import.meta.url).href,
   },
 ];
 
 export const defaultWeatherOptions = {
-  day: {
-    url: new URL("../assets/day/default.png", import.meta.url).href,
-  },
-  night: {
-    url: new URL("../assets/night/default.png", import.meta.url).href,
-  },
+  day: { url: new URL("../assets/day/default.svg", import.meta.url).href },
+  night: { url: new URL("../assets/night/default.svg", import.meta.url).href },
 };
-
-export const coordinates = {
-  latitude: 30.267153,
-  longitude: -97.743057,
-};
-
-export const APIkey = "7934cfc5800f6dcb2b5fbf9595e01982";
 
 export const defaultClothingItems = [
   {
     _id: 0,
     name: "Cap",
-    weather: "warm",
+    weather: "hot",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png?etag=f3dad389b22909cafa73cff9f9a3d591",
   },
   {
     _id: 1,
     name: "Hoodie",
-    weather: "cold",
+    weather: "warm",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Hoodie.png?etag=5f52451d0958ccb1016c78a45603a4e8",
   },
   {
@@ -99,7 +88,7 @@ export const defaultClothingItems = [
   {
     _id: 3,
     name: "Sneakers",
-    weather: "hot",
+    weather: "cold",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sneakers.png?etag=3efeec41c1c78b8afe26859ca7fa7b6f",
   },
   {
@@ -114,10 +103,10 @@ export const defaultClothingItems = [
     weather: "cold",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4",
   },
-  {
-    _id: 6,
-    name: "Shorts",
-    weather: "hot",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png?etag=d728c496643f610de8d8fea92dd915ba",
-  },
 ];
+
+export const coordinates = {
+  latitude: 40.712776,
+  longitude: -74.005974,
+};
+export const APIkey = "7934cfc5800f6dcb2b5fbf9595e01982";

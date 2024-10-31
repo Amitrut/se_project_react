@@ -1,28 +1,37 @@
 .card {
+  width: 325px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 19px;
   position: relative;
   display: flex;
   justify-content: center;
-  width: 323px;
-  font-family: "Cabinet Grotesk", sans-serif;
+  margin-top: 34px;
 }
 
 .card__name {
-  position: absolute;
-  display: flex;
-  top: 15px;
-  margin: 0;
-  padding: 2px 12px;
-  background-color: #fff;
-  border-radius: 4px;
-  gap: 8px;
-  font-weight: 700;
   font-size: 16px;
-  color: #000;
-  opacity: 60%;
+  line-height: 20px;
+  margin-left: auto;
+  opacity: 0.6;
+  position: absolute;
+  background-color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 4px;
 }
 
 .card__image {
   width: 100%;
-  border: 1px #000;
   border-radius: 19px;
+}
+
+.cards_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 21px;
 }
