@@ -1,0 +1,15 @@
+.modal__login-button {
+  position: absolute;
+  bottom: 36px;
+  left: 152px;
+  border: none;
+  color: #00000080;
+  background-color: transparent;
+  width: 80px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 10px 10px;
+}

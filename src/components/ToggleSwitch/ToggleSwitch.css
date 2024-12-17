@@ -1,14 +1,16 @@
 .switch {
   display: flex;
   position: relative;
+  margin: 0 20px 0 auto;
 }
 
 .switch__box {
   border-radius: 25px;
   border: 2px solid #7e7e7e;
-  width: 50px;
+  width: 55px;
   height: 30px;
   appearance: none;
+  background-color: white;
 }
 
 .switch__slider {
@@ -20,38 +22,37 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
-  transition: left 0.2s;
 }
 
 .switch__slider-F {
-  top: 0;
-  left: 1px;
+  /* top: 3px; */
+  left: 25px;
 }
 
 .switch__slider-C {
-  top: 0;
-  left: 20px;
-}
-
-.switch__active {
-  font-size: 16px;
-  color: #7e7e7e;
-}
-
-.switch__temp-inactive {
-  color: #7e7e7e;
+  /* top: 3px; */
+  /* left: 5px; */
 }
 
 .switch__temp-F {
   position: absolute;
-  color: rgba(243, 243, 243, 1);
-  top: -8px;
-  left: 10px;
+  top: -10px;
+  left: 36px;
+  color: transparent;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .switch__temp-C {
   position: absolute;
-  color: rgba(243, 243, 243, 1);
-  top: -8px;
-  left: 30px;
+  top: -10px;
+  left: 10px;
+  color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.switch__active {
+  font-size: 16px;
+  color: white;
 }

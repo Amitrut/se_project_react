@@ -1,34 +1,65 @@
 const baseUrl = "http://localhost:3001";
 
-export const handleServerResponse = (res) => {
+function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
-};
-
-async function getItems() {
-  return fetch(`${baseUrl}/items`).then(handleServerResponse);
 }
 
-async function addItem({ name, weather, imageUrl }) {
+function getItems() {
+  return fetch(`${baseUrl}/items`)
+    .then(checkResponse)
+    .then((data) => {
+      console.log(data);
+      return data;
+    });
+}
+
+function addItem(item, token) {
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({
-      name,
-      weather,
-      imageUrl,
-    }),
-  }).then(handleServerResponse);
+    body: JSON.stringify(item),
+  }).then(checkResponse);
 }
 
-async function deleteItem(id) {
+function deleteItem(id) {
   return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
     },
-  }).then(handleServerResponse);
+  }).then(checkResponse);
 }
 
-export { getItems, addItem, deleteItem };
+function addCardLike(id, token) {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  }).then(checkResponse);
+}
+
+function removeCardLike(id, token) {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  }).then(checkResponse);
+}
+
+export {
+  getItems,
+  addItem,
+  deleteItem,
+  checkResponse,
+  addCardLike,
+  removeCardLike,
+  baseUrl,
+};
